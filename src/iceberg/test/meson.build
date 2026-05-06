@@ -105,6 +105,10 @@ iceberg_tests = {
         ),
         'use_data': true,
     },
+    'position_delete_range_consumer_benchmark_test': {
+        'sources': files('position_delete_range_consumer_benchmark_test.cc'),
+        'use_data': true,
+    },
     'puffin_test': {
         'sources': files('puffin_format_test.cc', 'puffin_json_test.cc'),
         'use_data': true,

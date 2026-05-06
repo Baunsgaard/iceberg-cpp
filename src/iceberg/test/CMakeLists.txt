@@ -139,6 +139,16 @@ add_iceberg_test(util_test
                  uuid_test.cc
                  visit_type_test.cc)
 
+add_iceberg_test(position_delete_range_consumer_benchmark_test
+                 USE_DATA
+                 SOURCES
+                 position_delete_range_consumer_benchmark_test.cc)
+
+add_iceberg_test(position_delete_filter_path_benchmark_test
+                 USE_DATA
+                 SOURCES
+                 position_delete_filter_path_benchmark_test.cc)
+
 add_iceberg_test(puffin_test
                  USE_DATA
                  SOURCES
@@ -222,6 +232,11 @@ if(ICEBERG_BUILD_BUNDLE)
                    SOURCES
                    data_writer_test.cc
                    delete_loader_test.cc)
+
+  add_iceberg_test(position_delete_loader_benchmark_test
+                   USE_BUNDLE
+                   SOURCES
+                   position_delete_loader_benchmark_test.cc)
 
 endif()
 
